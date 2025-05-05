@@ -1,0 +1,2 @@
+# This will make sure that people on Windows will not have line ending issues.
+* text=auto eol=lf
