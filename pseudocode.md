@@ -9,14 +9,14 @@
 1. Create GUI Window
 1. Set up layout
 1. Run main loop
-  1. On "Create Student" button pressed
-    1. Create student row
-  1. On "Edit Student" button pressed
-    1. Edit student row
-  1. On "Delete Student" button pressed
-    1. Delete student row
-  1. On "Quit" button pressed
-    1. Done.
+    1. On "Create Student" button pressed
+        1. Create student row
+    1. On "Edit Student" button pressed
+        1. Edit student row
+    1. On "Delete Student" button pressed
+        1. Delete student row
+    1. On "Quit" button pressed
+        1. Done.
 
 ## Create Student Row
 
