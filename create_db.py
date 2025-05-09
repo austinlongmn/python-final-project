@@ -1,3 +1,8 @@
+################################################################################
+# NOTE: This script is no longer in use. It is only left here for grading from #
+# week 14. The database is now created in the program.                         #
+################################################################################
+
 import sqlite3
 
 

@@ -1,4 +1,4 @@
-from students_db.db import Student
+from students_db.student import Student
 
 
 def test_student_constructor():
