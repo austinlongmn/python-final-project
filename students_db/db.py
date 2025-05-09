@@ -5,25 +5,25 @@ from student import Student
 
 
 class StudentDatabase:
-    def __init__(self, database_file: str, reset_database: bool = True) -> None:
-        self.__connection = sqlite3.connect(database_file)
-        self.__cursor = self.__connection.cursor()
+    def __init__(self, database_file: str, reset_database: bool = False) -> None:
+        self._connection = sqlite3.connect(database_file)
+        self._cursor = self._connection.cursor()
 
         if reset_database:
-            self.__cursor.execute(
+            self._cursor.execute(
                 """
                 DROP TABLE IF EXISTS Students;
             """
             )
 
-        self.__ensure_table()
+        self._ensure_table()
 
         if reset_database:
             with open("students_db/test_data.sql") as test_data_file:
-                self.__cursor.executescript(test_data_file.read())
+                self._cursor.executescript(test_data_file.read())
 
-    def __ensure_table(self):
-        self.__cursor.execute(
+    def _ensure_table(self):
+        self._cursor.execute(
             """
             CREATE TABLE IF NOT EXISTS Students (
                 id INTEGER PRIMARY KEY NOT NULL,
@@ -40,10 +40,10 @@ class StudentDatabase:
         )
 
     def commit(self):
-        self.__connection.commit()
+        self._connection.commit()
 
     def close(self):
-        self.__connection.close()
+        self._connection.close()
 
     def __enter__(self):
         return self
